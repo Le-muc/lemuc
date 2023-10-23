@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./imagenes/annie-spratt-ctXf1GVyf9A-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: contrast(20%); /* Ajusta el valor según tus preferencias (50% en este caso) */
+  z-index: -1;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  color: #000000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+.brand {
+  margin-top: -4px;
+  font-size: 30px;
+}
+
+.brand span {
+  color: rgb(121, 232, 139);
+}
+
+.menu {
+  display: flex;
+  width: 54%;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: #000000;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menu .active {
+  color: rgb(121, 232, 139);
+  font-size: 18px;
+}
+
+.menu a:hover {
+  background-color: rgb(121, 232, 139);
+  color: #191c32;
+  border-radius: 20px;  
+  transition: linear 1s;
+  
+}
+
+.menu-toggle {
+    display: none; /* Ocultar la hamburguesa en tamaños de pantalla normales */
+}
+
+/* Estilos para dispositivos móviles (responsive) */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Ocultar el menú en pantallas pequeñas */
+    flex-direction: column;
+    text-align: center;
+    background-color: #333; /* Fondo del menú desplegable */
+    position: absolute;
+    top: 50px; /* Ajusta la posición según tus necesidades */
+    left: 0;
+    right: 0;
+    padding: 10px 0;
+  }
+
+  .menu.active {
+    display: flex; /* Mostrar el menú cuando se active */
+  }
+
+  .menu-toggle {
+    display: block; /* Mostrar el ícono de hamburguesa */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    font-size: 18px; /* Tamaño del texto en el menú desplegable */
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+
+  .menu-toggle i {
+    color: #fff;
+    font-size: 45px; /* Tamaño del ícono de hamburguesa */
+    cursor: pointer;
+  }
+}
+
+.main {
+  margin: 0 auto;
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+.miparrafo {
+  font-weight: bold;
+}
+
+span {
+  color: rgb(121, 232, 139);
+}
+
+.download-cv {
+  padding: 10px 20px;
+  background-color: rgb(121, 232, 139);
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 1px 3px 11px -5px rgba(102, 231, 200, .69);
+}
+
+.download-cv:hover {
+  background-color: #fff;
+  box-shadow: none;
+}
+
+.main img {
+  width: 390px;
+  border: 3px solid rgb(121, 232, 139);
+  border-radius: 90px;
+  z-index: 1;
+}
+
+.abaut {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100vw;
+  align-items: center;
+}
+
+.u {
+  color: rgb(121, 232, 139);
+  text-align: center;
+  width: 100%;
+  grid-column: 1/5;
+  font-size: 500px; 
+  font-weight: bold;
+}
+
+.lemuc-info{
+  grid-column: 5/10;
+  padding: 3em;
+  
+}
+
+.lemuc-info h2{
+  font-weight: bold;
+  font-size: 3em;
+}
+
+.divider {
+  height: 4px;
+  width: 60px;
+  margin-top: 10px;
+  margin-bottom: 3em;
+}
+
+/* Tus estilos CSS existentes aquí */
+
+/* Estilos generales */
+
+/* Establece el tamaño de fuente base y otros estilos generales */
+
+/* Estilos para tamaños de pantalla más grandes (escritorio) */
+@media (min-width: 769px) {
+  .wrapper {
+    /* Establece el ancho y margen del wrapper para pantallas más grandes */
+  }
+
+  .main {
+    /* Establece el tamaño y margen de .main para pantallas más grandes */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-content {
+    /* Establece el ancho y margen de .info-content para pantallas más grandes */
+  }
+
+  .main img {
+    /* Establece el tamaño de la imagen para pantallas más grandes */
+  }
+
+  .abaut {
+    /* Establece el ancho y margen de .abaut para pantallas más grandes */
+  }
+
+  .u {
+    /* Establece el tamaño de fuente de .u para pantallas más grandes */
+  }
+}
+
+/* Estilos para tamaños de pantalla más pequeños (móvil) */
+@media (max-width: 768px) {
+  .wrapper {
+    width: 80%; /* Por ejemplo, un ancho del 80% */
+    margin: 0 auto;/* Establece el ancho y margen del wrapper para pantallas más pequeñas */
+  }
+
+  .main {
+    /* Establece el tamaño y margen de .main para pantallas más pequeñas */
+    display: block; /* Cambia a apilamiento vertical en lugar de cuadrícula */
+  }
+
+  .info-content {
+    width: 80%; /* Establece un ancho fijo */
+    margin: 0 auto; /* Centra horizontalmente */
+    text-align: center;
+    /* Establece el ancho y margen de .info-content para pantallas más pequeñas */
+  }
+
+  .main img {
+    margin-top: 5%;
+  
+    /* Establece el tamaño de la imagen para pantallas más pequeñas */
+  }
+
+  .abaut {
+    text-align: center;
+    /* Establece el ancho y margen de .abaut para pantallas más pequeñas */
+  }
+
+  .u {
+    width: 80%;
+    /* Establece el tamaño de fuente de .u para pantallas más pequeñas */
+  }
+}
+
+
+
+
